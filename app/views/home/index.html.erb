@@ -1,0 +1,45 @@
+<h1>Job Search</h1>
+
+<%= form_tag job_posts_path, :method => 'get' do %>
+<table>
+<tr>
+<td>
+Title
+</td>
+<td>
+<%= text_field_tag :search_title, params[:search_title]  %>
+</td>
+</tr>
+<tr>
+<td>
+Salary Range
+</td>
+<td>
+<%= text_field_tag :search_salmin, params[:search_salmin]  %>
+to
+<%= text_field_tag :search_salmax, params[:search_salmax]  %>
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+Zip
+</td>
+<td>
+<%= text_field_tag :search_zip, params[:search_zip]  %>
+</td>
+</tr>
+<tr>
+<td>
+<%= submit_tag "Search Jobs", :name => nil %>
+</td>
+</tr>
+</table>
+
+
+
+<%= link_to "Company CRUD", companies_path %>
+<%= link_to "Job Post CRUD", job_posts_path %>
+
+<% end %>

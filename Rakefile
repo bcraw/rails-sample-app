@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-RailsSampleApp::Application.load_tasks
+BcrawEmpguide::Application.load_tasks
